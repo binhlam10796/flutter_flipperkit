@@ -84,11 +84,7 @@ public class FlipperDatabaseBrowserPlugin implements FlipperPlugin {
             FlipperArray results = new FlipperArray(jsonString);
 
             final FlipperObject flipperObject =
-                    new FlipperObject.Builder()
-                            .put("action", call.argument("action"))
-                            .put("table", call.argument("table"))
-                            .put("results", results)
-                            .build();
+                    new FlipperObject.Builder().put("action", call.argument("action")).put("table", call.argument("table")).put("results", results).build();
 
             this.sendData("newQueryResult", flipperObject);
         }
